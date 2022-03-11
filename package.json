@@ -1,0 +1,14 @@
+{
+  "name": "chatly-mern",
+  "version": "1.0.0",
+  "description": "Chat WebApp using MERN Stack",
+  "main": "index.js",
+  "scripts": {
+    "start": "node backend/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
