@@ -4,11 +4,14 @@
   "description": "Chat WebApp using MERN Stack",
   "main": "index.js",
   "scripts": {
-    "start": "node backend/index.js"
+    "start": "nodemon backend/index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.3"
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15",
+    "tar": "^6.1.11"
   }
 }
