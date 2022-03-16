@@ -4,7 +4,7 @@
   "description": "Chat WebApp using MERN Stack",
   "main": "index.js",
   "scripts": {
-    "start": "node backend/index.js"
+    "start": "nodemon backend/index.js"
   },
   "author": "",
   "license": "ISC",
