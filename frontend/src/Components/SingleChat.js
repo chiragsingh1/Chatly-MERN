@@ -5,6 +5,7 @@ import { ChatState } from "../Context/ChatProvider";
 import { getSender, getSenderFull } from "../config/ChatLogic";
 
 import ProfileModal from "../Components/Miscellaneous/ProfileModal";
+import UpdateGroupChatModal from "./Miscellaneous/UpdateGroupChatModal";
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
   const { user, selectedChat, setSelectedChat } = ChatState();
@@ -35,7 +36,13 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
                 <ProfileModal user={getSenderFull(user, selectedChat.users)} />
               </>
             ) : (
-              <>{selectedChat.chatName}</>
+              <>
+                {selectedChat.chatName}
+                <UpdateGroupChatModal
+                  fetchAgain={fetchAgain}
+                  setFetchAgain={setFetchAgain}
+                />
+              </>
             )}
           </Text>
           <Box
