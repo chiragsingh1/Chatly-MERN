@@ -40,7 +40,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
         `/api/message/${selectedChat._id}`,
         config
       );
-      console.log(data);
+      // console.log(data);
 
       setMessages(data);
       setLoading(false);
@@ -59,6 +59,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
 
   useEffect(() => {
     fetchMessages();
+    // eslint-disable-next-line
   }, [selectedChat]);
 
   const sendMessage = async (event) => {
@@ -81,7 +82,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
           config
         );
         // socket.emit("new message", data);
-        console.log(data);
+        // console.log(data);
 
         setMessages([...messages, data]);
       } catch (error) {

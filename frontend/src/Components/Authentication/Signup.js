@@ -45,7 +45,7 @@ const Signup = () => {
         .then((res) => res.json())
         .then((data) => {
           setPic(data.url.toString());
-          console.log(data);
+          // console.log(data);
           setPicLoading(false);
         })
         .catch((err) => {
@@ -89,7 +89,7 @@ const Signup = () => {
       return;
     }
 
-    console.log(name, email, password, pic);
+    // console.log(name, email, password, pic);
     try {
       const config = {
         headers: {
@@ -106,7 +106,7 @@ const Signup = () => {
         },
         config
       );
-      console.log(data);
+      // console.log(data);
       toast({
         title: "Registration Successful",
         status: "success",
@@ -128,6 +128,7 @@ const Signup = () => {
       });
       setPicLoading(false);
     }
+    window.location.reload();
   };
 
   return (
